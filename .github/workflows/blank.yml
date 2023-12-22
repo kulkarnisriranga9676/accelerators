@@ -3,19 +3,19 @@ on:
   workflow_dispatch:
     inputs:
       checkbox_1:
-        description: 'Checkbox 1 description'
+        description: 'Terraform Nodes'
         required: false
         default: false
       checkbox_2:
-        description: 'Checkbox 2 description'
+        description: 'KOPS Installation'
         required: false
         default: false
       checkbox_3:
-        description: 'Checkbox 3 description'
+        description: 'EFK Installation'
         required: false
         default: false
       checkbox_4:
-        description: 'Checkbox 4 description'
+        description: 'Monitoring Installation'
         required: false
         default: false
 
