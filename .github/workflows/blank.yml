@@ -2,6 +2,11 @@ name: Manual Workflow with Checkboxes
 on:
   workflow_dispatch:
     inputs:
+      environment:
+        description: 'Select environment'
+        required: true
+        default: 'dev'
+        options: ['dev', 'qa', 'prod']
       checkbox_1:
         description: 'Terraform Nodes'
         required: false
