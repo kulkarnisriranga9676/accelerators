@@ -3,19 +3,19 @@ on:
   workflow_dispatch:
     inputs:
       checkbox_1:
-        description: 'Terraform Nodes'
+        description: 'Checkbox 1 description'
         required: false
         default: false
       checkbox_2:
-        description: 'KOPS Installation'
+        description: 'Checkbox 2 description'
         required: false
         default: false
       checkbox_3:
-        description: 'EFK Installation'
+        description: 'Checkbox 3 description'
         required: false
         default: false
       checkbox_4:
-        description: 'Monitoring Installation'
+        description: 'Checkbox 4 description'
         required: false
         default: false
 
@@ -23,9 +23,24 @@ jobs:
   run_workflow:
     runs-on: ubuntu-latest
     steps:
-      - name: Display selected checkboxes
+      - name: Check selected checkboxes and run commands
         run: |
-          echo "Checkbox 1: ${{ github.event.inputs.checkbox_1 }}"
-          echo "Checkbox 2: ${{ github.event.inputs.checkbox_2 }}"
-          echo "Checkbox 3: ${{ github.event.inputs.checkbox_3 }}"
-          echo "Checkbox 4: ${{ github.event.inputs.checkbox_4 }}"
+          if [[ "${{ github.event.inputs.checkbox_1 }}" == true ]]; then
+            echo "Running command for Checkbox 1"
+            # Replace this echo command with your actual command for Checkbox 1
+          fi
+
+          if [[ "${{ github.event.inputs.checkbox_2 }}" == true ]]; then
+            echo "Running command for Checkbox 2"
+            # Replace this echo command with your actual command for Checkbox 2
+          fi
+
+          if [[ "${{ github.event.inputs.checkbox_3 }}" == true ]]; then
+            echo "Running command for Checkbox 3"
+            # Replace this echo command with your actual command for Checkbox 3
+          fi
+
+          if [[ "${{ github.event.inputs.checkbox_4 }}" == true ]]; then
+            echo "Running command for Checkbox 4"
+            # Replace this echo command with your actual command for Checkbox 4
+          fi
